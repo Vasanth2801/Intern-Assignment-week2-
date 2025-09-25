@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;                                           // movement vector for x and y axis
     PlayerController playerController;                          //Reference to the input action we have created 
     public Animator animator;                                    //Reference to the animator component
+    public float health;
+    public float maxHealth = 100f;
+    public Image healthBar;                                   //Reference to the health bar UI
 
 
     // Called before the first frame of the game
@@ -18,6 +22,11 @@ public class PlayerMovement : MonoBehaviour
         playerController = new PlayerController();                      //Initialize the player controller
         MovementCalling();                                               //Method to handle the movement input actions
 
+    }
+
+    void Start()
+    {
+        health = maxHealth;                                            //Set the health to max health at the start
     }
 
     //Method to handle movement input actions we have created in the input action
@@ -48,5 +57,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Speed", movement.sqrMagnitude);                          // Set the speed parameter in the animator based on movement magnitude
 
         transform.localScale = new Vector3(movement.x >= 0 ? 1 : -1, 1, 1);               // Flip the player sprite based on movement direction
+    }
+
+    private void Update()
+    {
+        healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1); // Update the health bar fill amount based on current health
     }
 }

@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float lifeTime = 2f;        // Lifetime of the bullet before it gets deactivated
     private float lifeTimer;                             // Timer to track the lifetime
 
+
     [Header("references")]
     Rigidbody2D rb;                            // Reference to the Rigidbody2D component
 
@@ -33,4 +34,6 @@ public class Bullet : MonoBehaviour
             gameObject.SetActive(false);          // Deactivate the bullet when lifetime is over
         }
     }
+
+    
 }

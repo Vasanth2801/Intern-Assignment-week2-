@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;      //static instance of the GameManager class
 
+    [SerializeField] private GameObject gameoverPanel; // Reference to the game over panel
+
     void Awake()
     {
         if (instance == null)                 //if the instance is null
@@ -28,6 +30,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);           // Load the Game scene
         Time.timeScale = 1f;              //set the time scale to 1f
     }
+
+    public void gameOver()
+    {
+        gameoverPanel.SetActive(true);       // Activate the game over panel
+        Time.timeScale = 0f;                 // Pause the game by setting time scale to 0
+    }
+
 
     public void QuitGame()
     {

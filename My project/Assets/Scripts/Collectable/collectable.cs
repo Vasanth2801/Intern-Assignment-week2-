@@ -9,5 +9,6 @@ public class collectable : MonoBehaviour
             ScoreManager.instance.AddScore(10); // Add 10 points to the score
             Destroy(gameObject); // Destroy the collectable object
         }
+
     }
 }
