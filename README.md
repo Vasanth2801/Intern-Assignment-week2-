@@ -15,3 +15,9 @@ Esc button pressed for Resume and pause
 
 Images:
 
+![image alt](https://github.com/Vasanth2801/Intern-Assignment-week2-/blob/79a2669468a4c907db253faa98d9ddd48b7fe842/Screenshot%20(640).png)
+![image alt](https://github.com/Vasanth2801/Intern-Assignment-week2-/blob/79a2669468a4c907db253faa98d9ddd48b7fe842/Screenshot%20(642).png)
+![image alt](https://github.com/Vasanth2801/Intern-Assignment-week2-/blob/79a2669468a4c907db253faa98d9ddd48b7fe842/Screenshot%20(644).png)
+![image alt](https://github.com/Vasanth2801/Intern-Assignment-week2-/blob/79a2669468a4c907db253faa98d9ddd48b7fe842/Screenshot%20(647).png)
+![image alt](https://github.com/Vasanth2801/Intern-Assignment-week2-/blob/79a2669468a4c907db253faa98d9ddd48b7fe842/Screenshot%20(655).png)
+![image alt](https://github.com/Vasanth2801/Intern-Assignment-week2-/blob/79a2669468a4c907db253faa98d9ddd48b7fe842/Screenshot%20(648).png)
