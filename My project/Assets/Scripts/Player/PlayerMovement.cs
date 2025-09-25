@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;                     // Reference to the Rigidbody2D component
     Vector2 movement;                                           // movement vector for x and y axis
     PlayerController playerController;                          //Reference to the input action we have created 
+    public Animator animator;                                    //Reference to the animator component
 
 
     // Called before the first frame of the game
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         playerController = new PlayerController();                      //Initialize the player controller
         MovementCalling();                                               //Method to handle the movement input actions
+
     }
 
     //Method to handle movement input actions we have created in the input action
@@ -41,5 +43,10 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);   // Move the player based on the movement vector and speed
+        animator.SetFloat("Horizontal", movement.x);                                 // Set the horizontal parameter in the animator based on movement
+        animator.SetFloat("Vertical", movement.y);                                   // Set the vertical parameter in the animator based on movement
+        animator.SetFloat("Speed", movement.sqrMagnitude);                          // Set the speed parameter in the animator based on movement magnitude
+
+        transform.localScale = new Vector3(movement.x >= 0 ? 1 : -1, 1, 1);               // Flip the player sprite based on movement direction
     }
 }
