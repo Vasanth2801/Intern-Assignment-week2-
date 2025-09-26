@@ -34,6 +34,7 @@ public class FireTrap : MonoBehaviour
             if(isActive)
             {
                 playerMovement.health -= damageAmount;
+                CameraShake.instance.Shake(4f,1f);
             }
         }
     }

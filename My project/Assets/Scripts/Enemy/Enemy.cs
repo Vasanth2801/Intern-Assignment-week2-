@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 
     private EnemySpawner enemySpawner;
     private PlayerMovement playerMovement;
+   
 
 
     void Awake()
@@ -51,8 +52,8 @@ public class Enemy : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             playerMovement.health -= damage; // Reduce player's health on collision
-
-            if(playerMovement.health <= 0)
+            CameraShake.instance.Shake(4f,0.5f);
+            if (playerMovement.health <= 0)
             {
                 playerMovement.health = 0;
                 Debug.Log("Player Dead!");
