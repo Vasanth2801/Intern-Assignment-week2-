@@ -19,6 +19,8 @@ public class EnemySpawner : MonoBehaviour
     public int currentWave = 0;                        //current wave that is being spawning from the array 
     private bool countDownBegin;                       //Bool to check if the countdown has begun or not
     [SerializeField] private TextMeshProUGUI waveCountDownText; //Text to display the countdown timer
+
+
     private void Start()
     {
         countDownBegin = true;                        //Starting the countdown when the game starts
